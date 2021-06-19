@@ -414,6 +414,45 @@
           <use href="./img/icons/sprite.svg#btn-modal-close"></use>
         </svg>
       </button>
+      
+      <form class="modal-form">
+        <p class="modal-form-title">Оставьте свои данные, мы вам перезвоним</p>
+
+        <label class="modal-form-icon-lab" for="name">
+          Имя
+          <svg class="modal-form-icon" width="18" height="18">
+            <use href="./img/icons/sprite.svg#icon-person"></use>
+          </svg>
+        </label>
+        <input type="text" name="name" id="name">
+        
+        <label class="modal-form-icon-lab" for="tel">
+          Телефон
+          <svg class="modal-form-icon" width="18" height="18">
+            <use href="./img/icons/sprite.svg#icon-phone"></use>
+          </svg>
+        </label>
+        <input type="tel" name="tel" id="tel">
+        
+        <label class="modal-form-icon-lab" for="mail">
+          Почта
+          <svg class="modal-form-icon" width="18" height="18">
+            <use href="./img/icons/sprite.svg#icon-email"></use>
+          </svg>
+        </label>
+        <input type="email" name="mail" id="mail">
+        
+        <label class="modal-form-icon-lab" for="comment">Комментарий</label>
+        <textarea class="modal-form-comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
+        
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <svg width="16" height="15">
+          <use href="./img/icons/sprite.svg#icon-check"></use>
+        </svg>
+        <label class="m-form-checkbox-text" for="checkbox">Соглашаюсь с рассылкой и принимаю <a class="m-form-checkbox-url" href="#">Условия договора</a></label>
+        
+        <button class="modal-form-but" type="submit">Отправить</button>
+      </form>
     </div>
   </div>
 
