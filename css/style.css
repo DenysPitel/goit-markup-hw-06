@@ -683,24 +683,25 @@ img {
   align-items: flex-end;
 }
 
-.foot-form input {
+.foot-form-inp {
   width: 358px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  outline: none;
   transition: border var(--transf-hover);
+  color: var(--fons-html);
   background-color: var(--fons-title-color);
 }
 
-.foot-form input:hover,
-.foot-form input:focus {
+.foot-form-inp:hover,
+.foot-form-inp:focus {
   border-color: var(--hover-color);
-  transition: border-color var(--transf-hover);
 }
 
-.foot-form input::placeholder {
+.foot-form-inp::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25em;
@@ -813,7 +814,12 @@ img {
   margin-bottom: 12px;
 }
 
-.modal-form > .modal-form-icon-lab {
+.modal-form-icon-lab {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-form-text {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.167em;
@@ -822,23 +828,27 @@ img {
   color: var(--contacts-color);
 }
 
-.modal-form > .modal-form-inp {
+.modal-form-inp {
+  width: 100%;
   height: 40px;
   padding-left: 42px;
-  margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-}
-
-.modal-form-icon-lab {
-  position: relative;
+  outline: none;
+  transition: border var(--transf-hover);
 }
 
 .modal-form-icon {
   position: absolute;
-  left: 14px;
-  top: 28px;
+  top: 29px;
+  left: 12px;
   fill: var(--text-color);
+  transition: fill var(--transf-hover);
+}
+
+.modal-form-inp:hover + .modal-form-icon,
+.modal-form-inp:focus + .modal-form-icon {
+  fill: var(--hover-color);
 }
 
 .modal-form-comment {
@@ -848,31 +858,59 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-bottom: 20px;
+  margin-top: -10px;
+  outline: none;
+  transition: border var(--transf-hover);
 }
 
-/* .modal-form-comment::placeholder {
-  font-size: 12px;
-  line-height: 1.67;
-  letter-spacing: 0.01em;
-  color: var(--text-placeholder);
-} */
+.modal-form-inp:hover,
+.modal-form-inp:focus,
+.modal-form-comment:hover,
+.modal-form-comment:focus {
+  border-color: var(--hover-color);
+}
 
-.m-form-checkbox-text::before {
-  content: '';
+/* Modal checkbox
+=================== */
+
+.modal-form-check-cont {
   display: inline-block;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.modal-form-checkbox {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   width: 16px;
   height: 15px;
   border: 2px solid var(--text-color);
   border-radius: 2px;
+  transition: border var(--transf-hover);
 }
 
-.modal-form-check:checked + .m-form-checkbox-text::before {
-  border: currentColor;
+.modal-form-check-cont:hover > .modal-form-checkbox,
+.modal-form-check-cont:focus > .modal-form-checkbox {
+  border-color: var(--hover-color);
+}
+
+.modal-form-check-inp:checked + .modal-form-checkbox {
   background-color: var(--hover-color);
+  border-color: var(--hover-color);
 }
 
-.m-form-checkbox-text {
-  font-weight: 400;
+.modal-form-checkbox-icon {
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 11px;
+  fill: var(--fons-html);
+}
+
+.modal-form-chek-text {
+  display: inline-block;
+  padding-left: 4px;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
@@ -884,8 +922,10 @@ img {
 }
 
 .modal-form-but {
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
+  display: block;
+  align-self: center;
+  padding: 10px 55px 10px 56px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+
+/* CHECKBOX */

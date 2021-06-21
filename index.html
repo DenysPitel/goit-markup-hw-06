@@ -356,7 +356,7 @@
           </ul>
         </address>
       </div>
-<!-- Footer social -->
+  <!-- Footer social -->
       <div class="foot-cocial-sect">
         <h3 class="foot-name">Присоединяйтесь</h3>
         <ul class="foot-icon">
@@ -390,11 +390,11 @@
           </li>
         </ul>
       </div>
-<!-- Footer form -->
+  <!-- Footer form -->
       <form class="foot-form">
         <label>
           <h3 class="foot-form-name">Подпишитесь на рассылку</h3>
-          <input type="email" name="email" class="foot-form-inp" placeholder="E-mail" />
+          <input class="foot-form-inp" type="email" name="email" placeholder="E-mail" />
         </label>
         <button type="submit" class="foot-form-btn">
           Подписаться
@@ -406,7 +406,7 @@
     </div>
   </footer>
 
-<!-- Modal -->
+  <!-- Modal -->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button class="btn-modal-close" data-modal-close>
@@ -418,38 +418,44 @@
       <form class="modal-form">
         <p class="modal-form-title">Оставьте свои данные, мы вам перезвоним</p>
 
-        <label class="modal-form-icon-lab" for="name">
-          Имя
+        <label class="modal-form-icon-lab">
+          <p class="modal-form-text">Имя</p>
+          <input class="modal-form-inp" type="text" name="name" required>
           <svg class="modal-form-icon" width="18" height="18">
             <use href="./img/icons/sprite.svg#icon-person"></use>
           </svg>
         </label>
-        <input class="modal-form-inp" type="text" name="name" id="name" required>
         
-        <label class="modal-form-icon-lab" for="tel">
-          Телефон
+        <label class="modal-form-icon-lab">
+          <p class="modal-form-text">Телефон</p>
+          <input class="modal-form-inp" type="tel" name="tel" required>
           <svg class="modal-form-icon" width="18" height="18">
             <use href="./img/icons/sprite.svg#icon-phone"></use>
           </svg>
         </label>
-        <input class="modal-form-inp" type="tel" name="tel" id="tel" required>
-        
-        <label class="modal-form-icon-lab" for="mail">
-          Почта
+
+        <label class="modal-form-icon-lab">
+          <p class="modal-form-text">Почта</p>
+          <input class="modal-form-inp" type="email" name="mail" required>
           <svg class="modal-form-icon" width="18" height="18">
             <use href="./img/icons/sprite.svg#icon-email"></use>
           </svg>
         </label>
-        <input class="modal-form-inp" type="email" name="mail" id="mail" required>
         
-        <label class="modal-form-icon-lab" for="comment">Комментарий</label>
+        <label class="modal-form-icon-lab" for="comment">
+          <p class="modal-form-text">Комментарий</p>
+        </label>
         <textarea class="modal-form-comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
         
-        <input class="modal-form-check" type="checkbox" name="checkbox" id="checkbox" required>
-        <!-- <svg class="modal-form-check-icon" width="11" height="8">
-          <use href="./img/icons/sprite.svg#icon-check"></use>
-        </svg> -->
-        <label class="m-form-checkbox-text" for="checkbox">Соглашаюсь с рассылкой и принимаю <a class="m-form-checkbox-url" href="#">Условия договора</a></label>
+        <label class="modal-form-check-cont">
+          <input class="modal-form-check-inp visually-hidden" type="checkbox" name="checkbox" required>
+          <span class="modal-form-checkbox">
+            <svg class="modal-form-checkbox-icon">
+              <use href="./img/icons/sprite.svg#icon-check"></use>
+            </svg>
+          </span>
+          <p class="modal-form-chek-text">Соглашаюсь с рассылкой и принимаю <a class="m-form-checkbox-url" href="#">Условия договора</a></p>
+        </label>
         
         <button class="modal-form-but" type="submit">Отправить</button>
       </form>
