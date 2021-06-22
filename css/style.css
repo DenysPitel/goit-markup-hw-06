@@ -17,6 +17,7 @@
   --modal-back: rgba(0, 0, 0, 0.2);
   --transf-hover: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --serv-back: rgba(47, 48, 58, 0.8);
+  --modal-form-comm: rgba(117, 117, 117, 0.5);
 }
 
 * {
@@ -861,6 +862,13 @@ img {
   margin-top: -10px;
   outline: none;
   transition: border var(--transf-hover);
+}
+
+.modal-form-comment::placeholder {
+  font-size: 14px;
+  line-height: 1.143em;
+  letter-spacing: 0.01em;
+  color: var(--modal-form-comm);
 }
 
 .modal-form-inp:hover,
