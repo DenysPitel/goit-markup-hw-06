@@ -853,6 +853,9 @@ img {
 }
 
 .modal-form-comment {
+  font-size: 14px;
+  line-height: 1.143em;
+  letter-spacing: 0.01em;
   resize: none;
   height: 120px;
   padding: 12px 16px;
@@ -865,9 +868,6 @@ img {
 }
 
 .modal-form-comment::placeholder {
-  font-size: 14px;
-  line-height: 1.143em;
-  letter-spacing: 0.01em;
   color: var(--modal-form-comm);
 }
 
